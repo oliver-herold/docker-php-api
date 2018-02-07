@@ -1,0 +1,23 @@
+api:
+  build: container/.
+  ports:
+    - 8888:80
+  links:
+    - mysql:mysql
+
+mysql:
+  image: mysql
+  ports:
+      - 8886:3306
+  environment:
+    - "MYSQL_ROOT_PASSWORD=secret"
+    - "MYSQL_DATABASE=database"
+    - "MYSQL_USER=database"
+    - "MYSQL_PASSWORD=database"
+
+phpmyadmin:
+  image: phpmyadmin/phpmyadmin
+  links:
+    - mysql:db
+  ports:
+    - 8880:80

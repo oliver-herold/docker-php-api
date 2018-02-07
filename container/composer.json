@@ -1,0 +1,15 @@
+{
+    "require": {
+        "slim/slim": "^3.9",
+        "slim/pdo": "^1.10",
+        "symfony/translation": "~3.0",
+        "illuminate/database": "^5.5"
+        },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/",
+            "test\\": "tests/"
+        }
+    }
+}
+
