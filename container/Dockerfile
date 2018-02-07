@@ -13,7 +13,6 @@ RUN rm /var/www/html/test.html
 
 COPY composer.json /var/www/html
 
-
 COPY index.php /var/www/html
 
 RUN cd /var/www/html
