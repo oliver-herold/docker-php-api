@@ -12,6 +12,7 @@ RUN rm /var/www/html/index.php
 RUN rm /var/www/html/test.html
 
 COPY composer.json /var/www/html
+COPY composer.lock /var/www/html
 
 COPY index.php /var/www/html
 
